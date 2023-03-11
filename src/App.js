@@ -11,10 +11,10 @@ import {
   MessageInput,
   TypingIndicator
 } from "@chatscope/chat-ui-kit-react";
-import styles from "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 
 const configuration = new Configuration({
-  apiKey: "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"
+  apiKey: process.env.REACT_APP_APIKEY
 });
 
 const openai = new OpenAIApi(configuration);
@@ -23,7 +23,7 @@ export default function App() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I am ChatGPT",
+      message: "Hello, I am ChatGPT...",
       sender: "ChatGPT"
     }
   ]);
@@ -48,7 +48,8 @@ export default function App() {
 
     const systemMsg = {
       role: "system",
-      content: "Explain all concept like I am 10 years old."
+      // content: "Explain all concept like I am 10 years old."
+      content: "Explain all concept like I am an 10 years web-developer"
     };
 
     const apiRequestBody = {
@@ -65,10 +66,9 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: 16 }}>
-      <h3>Any question...?</h3>
-      <hr />
-      <MainContainer style={{ maxWidth: 800, margin: "auto" }}>
+    <div style={{ padding: 16, height: '95vh', display: 'flex', flexFlow:'column'}}>
+      <p style={{ width: 800, margin: "auto" }}>Any question...?</p>
+      <MainContainer style={{ width: 800, margin: "auto", flexBasis: '90%'}}>
         <ChatContainer style={{ padding: 8 }}>
           <MessageList
             style={{ padding: 8 }}
