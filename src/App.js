@@ -23,7 +23,7 @@ export default function App() {
   const [typing, setTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I am ChatGPT...",
+      message: "Hello, I am ChatGPT",
       sender: "ChatGPT"
     }
   ]);
