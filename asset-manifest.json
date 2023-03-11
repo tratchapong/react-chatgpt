@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-chatgpt/static/css/main.650dfca5.css",
+    "main.js": "/react-chatgpt/static/js/main.685a6fc5.js",
+    "index.html": "/react-chatgpt/index.html",
+    "main.650dfca5.css.map": "/react-chatgpt/static/css/main.650dfca5.css.map",
+    "main.685a6fc5.js.map": "/react-chatgpt/static/js/main.685a6fc5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.650dfca5.css",
+    "static/js/main.685a6fc5.js"
+  ]
+}
